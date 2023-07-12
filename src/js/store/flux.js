@@ -48,7 +48,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			console.log(error);
 		  }
 		},
-		getstarships: async () => {
+		getStarships: async () => {
 			try {
 			  const store = getStore();
 			  const response = await fetch(`${store.urlBase}/starships`);
@@ -56,8 +56,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return;
 			  }
 			  const data = await response.json();
-			  data.results.map(async (starships) => {
-				const response = await fetch(starships.url);
+			  data.results.map(async (starship) => {
+				const response = await fetch(starship.url);
 				const starshipData = await response.json();
 				setStore({
 				  starships: [...store.starships, starshipData],
