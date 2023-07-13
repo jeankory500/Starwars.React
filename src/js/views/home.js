@@ -17,12 +17,14 @@ return (
 	<div className="container" >
 		<div className="mt-5 text-danger">
 			<h1>Characters</h1>
+
 			<div className="row row-cols-5 scrollbar">
 				{store.characters.map((people)=> (
 					<Card key={people._id} item={people} nature={"characters"} />
 				))}
 				</div>
 				<h1>Planets</h1>
+
 			<div className="row row-cols-5 scrollbar">
 				{store.planets.map((planet)=> (
 				
@@ -31,8 +33,9 @@ return (
 				))}
 			</div>
 			<h1>StarShips</h1>
+			
 			<div className="row row-cols-5 scrollbar">
-				{store.characters.map((starships)=> (
+				{store.starships.map((starships)=> (
 					<Card key={starships._id} item={starships} nature={"starships"} />
 				))}
 		</div>
