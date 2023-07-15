@@ -2,7 +2,7 @@ img {
   width: auto;
 }
 .card {
-    width: 15rem;
+    width: auto;
 }
 .row {
     flex-wrap: nowrap;
@@ -12,3 +12,28 @@ div.scrollbar {
     overflow: auto;
     white-space: nowrap;
   }
+div.card{
+  background-color: lightblue;
+}
+.col {
+  background-color: lightgray; 
+}
+h1{
+  margin: 1rem;
+}
+.imageContainer .recordImage{
+padding: auto;
+margin: auto;
+}
+.recordImage{
+  display: flex;
+  content: center;
+}
+.recordName{
+  display: flex;
+}
+.record{
+  padding:auto;
+  margin:auto;
+  text-align:center;
+}

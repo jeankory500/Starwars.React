@@ -31,6 +31,7 @@ export const Card = ({ item, nature }) => {
       <>
         <p>Model: {item.result.properties.model}</p>
         <p>Hyperdrive rating: {item.result.properties.hyperdrive_rating}</p>
+        <p>Passengers: {item.result.properties.passengers}</p>
       </>
     );
   };
@@ -38,7 +39,7 @@ export const Card = ({ item, nature }) => {
   return (
     <div className="col">
       <div className="card">
-        <img src={`https://picsum.photos/300`} className="card-img-top" alt="..." />
+        <img src={(`https://starwars-visualguide.com/assets/img/${nature}/${item.result.uid}.jpg`) || (`http://via.placeholder.com/640x400`) } className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{item.result.properties.name}</h5>
 
@@ -64,6 +65,7 @@ export const Card = ({ item, nature }) => {
               >
                 ♥
               </button>
+
             )}
           </div>
         </div>
